@@ -4,7 +4,6 @@ import Answer from '../models/Answer'
 exports.GetContents = async (req, res) => {
   // TODO : get questions from mongodb and return to frontend
   Question.find()
-      .limit(100)
       .sort({ _id: 1 })
       .exec((err, res1) => {
         if (err) throw err
